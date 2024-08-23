@@ -1,11 +1,11 @@
-import { getProjects } from '../sanity/sanity-utils';
+import { getProjects } from '@/sanity/sanity-utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function Home() {
   const projects = await getProjects();
   return (
-    <div className="max-w-5xl mx-auto py-20">
+    <>
       <h1 className='text-7xl font-extrabold'>Hello I&apos;m &nbsp;
         <span className='bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent'>
           Morgan
@@ -33,6 +33,6 @@ export default async function Home() {
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 }
